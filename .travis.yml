@@ -93,8 +93,7 @@ jobs:
         env: TOX_ENV=py38-django30
       - python: 3.8
         arch: ppc64le
-        env: TOX_ENV=py38-django30
-		
+        env: TOX_ENV=py38-django30		
 script: tox -e $TOX_ENV
 install:
     - pip install pip setuptools wheel -U
