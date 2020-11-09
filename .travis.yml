@@ -28,6 +28,37 @@ matrix:
         env: TOX_ENV=py38-django22
       - python: 3.8
         env: TOX_ENV=py38-django30
+ #including ppc64le to run on power systems  
+      - python: 2.7
+        arch: ppc64le
+        env: TOX_ENV=py27-django111
+      - python: 3.6
+        arch: ppc64le
+        env: TOX_ENV=py36-django111
+      - python: 3.6
+        arch: ppc64le
+        env: TOX_ENV=py36-django22
+      - python: 3.6
+        arch: ppc64le
+        env: TOX_ENV=py36-django30
+      - python: 3.7
+        arch: ppc64le
+        env: TOX_ENV=py37-django111
+      - python: 3.7
+        arch: ppc64le
+        env: TOX_ENV=py37-django22
+      - python: 3.7
+        arch: ppc64le
+        env: TOX_ENV=py37-django30
+      - python: 3.8
+        arch: ppc64le
+        env: TOX_ENV=py38-django111
+      - python: 3.8
+        arch: ppc64le
+        env: TOX_ENV=py38-django22
+      - python: 3.8
+        arch: ppc64le
+        env: TOX_ENV=py38-django3
 
 script: tox -e $TOX_ENV
 
