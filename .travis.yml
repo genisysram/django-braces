@@ -60,43 +60,42 @@ matrix:
         arch: ppc64le
         env: TOX_ENV=py38-django3
 # excluding versions of python
-# Disable version 3.3, 3.2 & pypy
+# Disable version 3.7, 3.8
 jobs: 
   exclude:
       - python: 3.7
-        arch:
-             - amd64
-             - ppc64le
+        arch: ppc64le
         env: TOX_ENV=py37-django111
       - python: 3.7
-        arch:
-             - amd64
-             - ppc64le
+        env: TOX_ENV=py37-django111
+      - python: 3.7
+        arch: ppc64le
         env: TOX_ENV=py37-django22
       - python: 3.7
-        arch:
-            - amd64
-            - ppc64le
+        env: TOX_ENV=py37-django22
+      - python: 3.7
+        arch: ppc64le
+        env: TOX_ENV=py37-django30
+      - python: 3.7
         env: TOX_ENV=py37-django30
       - python: 3.8
-        arch:
-            - amd64
-            - ppc64le
+        arch: ppc64le
         env: TOX_ENV=py38-django111
       - python: 3.8
-        arch:
-             - amd64
-             - ppc64le
+        env: TOX_ENV=py38-django111
+      - python: 3.8
+        arch: ppc64le
         env: TOX_ENV=py38-django22
       - python: 3.8
-        arch:
-            - amd64
-            - ppc64le
+        env: TOX_ENV=py38-django22
+      - python: 3.8
+        arch: ppc64le
         env: TOX_ENV=py38-django30
-
-
+      - python: 3.8
+        arch: ppc64le
+        env: TOX_ENV=py38-django30
+		
 script: tox -e $TOX_ENV
-
 install:
     - pip install pip setuptools wheel -U
     - pip install tox tox-travis
