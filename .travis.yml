@@ -61,8 +61,8 @@ matrix:
         env: TOX_ENV=py38-django3
 # excluding versions of python
 # Disable version 3.7, 3.8
-jobs: 
-  exclude:
+matrix: 
+   allow_failures:
       - python: 3.7
         arch: ppc64le
         env: TOX_ENV=py37-django111
